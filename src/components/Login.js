@@ -1,16 +1,24 @@
 // Login.js
 
 import React, { useState } from 'react';
+import axios from 'axios';
 import './Login.css'; // Make sure you create a corresponding CSS file for styling
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Here you would usually handle the login logic, perhaps sending the username
-    // and password to a server for verification. For now, we'll just log to the console.
+    try {
+      const response = await axios.post('/api/login', { username, password });
+      console.log('Login successful');
+      // Here you might want to handle the successful login, such as redirecting to another page or setting a login state
+    } catch (error) {
+      setError('Invalid username or password');
+      console.error('Login failed:', error);
+    }
     console.log('Login attempted with:', username, password);
     // After login logic, you might want to set the username and password back to empty strings
     setUsername('');
@@ -21,6 +29,7 @@ const Login = () => {
     <div className="login-container">
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Login</h2>
+        {error && <div className="error-message">{error}</div>}
         <div className="input-group">
           <label htmlFor="username">Username</label>
           <input

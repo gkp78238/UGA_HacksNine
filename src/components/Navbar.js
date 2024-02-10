@@ -1,16 +1,16 @@
-// Navbar.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Your Navbar styles
+import './Navbar.css'; // Assuming you have a CSS file for the Navbar
 
-const Navbar = () => {
+function Navbar() {
     return (
         <nav className="navbar">
-            {/* Other navigation links */}
-            <Link to="/login" className="nav-link">Log In</Link>
+            {/* ... other nav items */}
+            <Link to="/login">Login</Link> {/* Existing login link */}
+            <Link to="/signup">Signup</Link> {/* Add this line for the signup link */}
+            {/* ... other nav items */}
         </nav>
     );
-};
+}
 
 export default Navbar;

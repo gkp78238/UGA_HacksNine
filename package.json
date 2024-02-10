@@ -28,7 +28,8 @@
     "eject": "react-scripts eject",
     "app": "nodemon app.js",
     "test:backend": "mocha --exit",
-    "dev": "concurrently \"npm start\" \"npm run server\""
+    "dev": "concurrently \"npm start\" \"npm run server\"",
+    "server": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": [

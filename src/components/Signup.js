@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './Signup.css';
 
 function Signup() {
@@ -7,11 +8,23 @@ function Signup() {
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the signup logic here
+    try {
+      // Send a POST request to your backend endpoint for user registration
+      const response = await axios.post('/api/register', { username, email, password });
+      console.log('User registered successfully:', response.data);
+      // Optionally, you can redirect the user to a different page after successful registration
+    } catch (error) {
+      setError('Failed to register user');
+      console.error('Registration failed:', error);
+    }
     console.log('Submitted:', { username, email, password, passwordConfirm });
     // You would typically want to validate the inputs and then send them to your server here
+    setUsername('');
+    setEmail('');
+    setPassword('');
+    setPasswordConfirm('');
   };
 
   return (

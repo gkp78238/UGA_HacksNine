@@ -4,7 +4,6 @@ import './Signup.css';
 
 function Signup() {
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [error, setError] = useState('');
@@ -13,17 +12,16 @@ function Signup() {
     e.preventDefault();
     try {
       // Send a POST request to your backend endpoint for user registration
-      const response = await axios.post('/api/register', { username, email, password });
+      const response = await axios.post('/api/register', { username, password });
       console.log('User registered successfully:', response.data);
       // Optionally, you can redirect the user to a different page after successful registration
     } catch (error) {
       setError('Failed to register user');
       console.error('Registration failed:', error);
     }
-    console.log('Submitted:', { username, email, password, passwordConfirm });
+    console.log('Submitted:', { username, password, passwordConfirm });
     // You would typically want to validate the inputs and then send them to your server here
     setUsername('');
-    setEmail('');
     setPassword('');
     setPasswordConfirm('');
   };
@@ -36,13 +34,6 @@ function Signup() {
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        required
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
         required
       />
       <input

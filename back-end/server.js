@@ -1,9 +1,15 @@
 require('dotenv').config(); // Load environment variables
 
-// server.js
 const express = require('express');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // Correctly place mongoose import here
 const cors = require('cors');
+
+// Database connection
+const dbURI = process.env.MONGODB_URI; // Define dbURI after loading environment variables
+console.log(dbURI)
+mongoose.connect(dbURI)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((error) => console.error('Error connecting to MongoDB:', error));
 
 // Import routes
 const authRoutes = require('./routes/authRoutes');
@@ -12,17 +18,11 @@ const elderlyRoutes = require('./routes/elderlyRoutes');
 const matchingRoutes = require('./routes/matchingRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(cors());
 app.use(express.json()); // Parses incoming requests with JSON payloads
-
-// Database connection
-const dbURI = process.env.MONGODB_URI; // Ensure you have your MongoDB URI in an environment variable
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((error) => console.error('Error connecting to MongoDB:', error));
 
 // Use routes
 app.use('/api/auth', authRoutes);
@@ -32,4 +32,3 @@ app.use('/api/matching', matchingRoutes);
 
 // Listen on port
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-

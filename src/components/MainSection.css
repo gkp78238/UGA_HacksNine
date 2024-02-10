@@ -1,0 +1,49 @@
+.main-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.main-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.main-section p {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Allows images to stack on smaller screens */
+}
+
+.image-container img {
+  width: 30%; /* Adjust width as necessary */
+  margin: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Specific styles for the larger main image */
+.image-container .main-image {
+  flex: 2; /* Takes up twice the space of the side images */
+  max-width: 60%; /* Adjust maximum width as necessary */
+}
+
+/* Specific styles for the side images */
+.image-container .side-image {
+  flex: 1;
+  max-width: 30%; /* Adjust maximum width as necessary */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-container img {
+      width: 100%; /* Stack images on top of each other on small screens */
+      max-width: 100%;
+  }
+}

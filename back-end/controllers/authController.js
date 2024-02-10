@@ -53,9 +53,9 @@ exports.login = async (req, res) => {
         }
 
         // Generate JWT token
-        const token = jwt.sign({ userId: user._id }, 'your_secret_key');
+        const token = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET);
 
-        res.status(200).json({ token });
+        res.status(200).json({ token }); // Return token as object
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server Error' });
@@ -64,5 +64,35 @@ exports.login = async (req, res) => {
 
 // User logout (if needed)
 exports.logout = async (req, res) => {
-    // Implement logout logic here
+    const token = req.headers['authorization']?.split(' ')[1]; // Extract token from Authorization header
+
+    if (!token) {
+        return res.status(401).json({ message: 'Token not provided' });
+    }
+
+    // Add token to blacklist
+    tokenBlacklist.push(token);
+
+    res.status(200).json({ message: 'Logout successful' });
+};
+
+// Middleware to authenticate JWT token
+exports.authenticateToken = (req, res, next) => {
+    const token = req.headers['authorization']?.split(' ')[1]; // Extract token from Authorization header
+
+    if (!token) {
+        return res.status(401).json({ message: 'Token not provided' });
+    }
+
+    if (tokenBlacklist.includes(token)) {
+        return res.status(403).json({ message: 'Token revoked' });
+    }
+
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+        if (err) {
+            return res.status(403).json({ message: 'Invalid token' });
+        }
+        req.user = user;
+        next();
+    });
 };

@@ -6,12 +6,9 @@ import Navbar from './components/Navbar';
 import MainSection from './components/MainSection';
 import Footer from './components/Footer';
 import Content from './components/Content'; // Make sure the path matches the location of your file
-<<<<<<< HEAD
-=======
 import Signup from './components/Signup'; // Adjust the path to where your Signup component is located
 
 import axios from 'axios';
->>>>>>> 65de5ef324f1edf1e3bcefc140da65b3ffd31973
 import Login from './components/Login'; // Import the Login component
 
 function App() {

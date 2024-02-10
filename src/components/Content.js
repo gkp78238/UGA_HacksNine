@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './Content.css';
+import image1 from '../Images/BlackPPL.jpeg'; // replace with actual path and filename
 
 const WhoWeAre = () => {
   return (
@@ -8,7 +9,7 @@ const WhoWeAre = () => {
       <div className="image-section">
         {/* Image goes here - for the example, it's a placeholder */}
         {/* You would replace the src with the path to your image file */}
-        <img src="path-to-your-image.jpg" alt="Nature Background" />
+        <img src= {image1} alt="Helping old people" />
       </div>
       <div className="text-section">
         <h1>Who We Are</h1>

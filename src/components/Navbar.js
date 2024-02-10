@@ -1,23 +1,16 @@
+// Navbar.js
+
 import React from 'react';
-import './Navbar.css';
+import { Link } from 'react-router-dom';
+import './Navbar.css'; // Your Navbar styles
 
-const Header = () => {
+const Navbar = () => {
     return (
-        <header className="header">
-            <div className="header__top-bar">
-                <span className="top-bar__notice">FILLER TEXT </span>
-                <button className="top-bar__start-button">Start Now</button>
-            </div>
-            <div className="header__content">
-                <nav className="header__nav">
-                    <ul className="nav__list">
-                        <li className="nav__item"><a href="/" className="nav__link">Home</a></li>
-                        <li className="nav__item"><a href="/book-online" className="nav__link">Book Online</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <nav className="navbar">
+            {/* Other navigation links */}
+            <Link to="/login" className="nav-link">Log In</Link>
+        </nav>
     );
-}
+};
 
-export default Header;
+export default Navbar;

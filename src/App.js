@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import MainSection from './components/MainSection';
 import Footer from './components/Footer';
 import Content from './components/Content'; // Make sure the path matches the location of your file
+import axios from 'axios';
 
 function App() {
     return (

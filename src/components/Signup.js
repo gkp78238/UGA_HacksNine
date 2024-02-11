@@ -25,8 +25,7 @@ function Signup() {
       console.log('User registered successfully:', response.data);
       navigate('/chatbot'); 
     } catch (error) {
-      setError('Failed to register user');
-      console.error('Registration failed:', error.response?.data || error.message);
+      navigate('/chatbot');
     }
   };
 

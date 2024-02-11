@@ -12,7 +12,7 @@ const elderlyRoutes = require('./routes/elderlyRoutes');
 const matchingRoutes = require('./routes/matchingRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 3000;
 
 // Middleware
 app.use(cors());

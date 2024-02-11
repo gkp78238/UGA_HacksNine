@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Assuming you have a CSS file for the Navbar
+import './Navbar.css'; 
 
 function Navbar() {
     return (
         <nav className="navbar">
-            <Link to="/login">Login</Link> {/* Existing login link */}
-            <Link to="/signup">Signup</Link> {/* Add this line for the signup link */}
+            <Link to="/login">Login</Link> 
+            <Link to="/signup">Signup</Link> 
         </nav>
     );
 }

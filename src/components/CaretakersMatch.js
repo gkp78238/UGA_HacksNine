@@ -1,20 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './CaretakersMatch.css'; // Make sure you have the corresponding CSS file
+import { Link, useNavigate } from 'react-router-dom';
+import './CaretakersMatch.css';
 
 const caretakers = [
-  // Hardcoded caretaker data
-  { name: 'Caretaker 1', image: 'path_to_image_1', description: 'Description 1' },
-  { name: 'Caretaker 2', image: 'path_to_image_2', description: 'Description 2' },
-  { name: 'Caretaker 3', image: 'path_to_image_3', description: 'Description 3' },
+  {
+    name: 'Jenny Cares',
+    image: "https://www.rightathome.net/-/media/rahv2/careers/coty/2023/image-grid-480x550/rah-cgoy23-headshots-markiajenkins-480x550.jpg?h=550&w=480&la=en&hash=C482D1311121402BD6CF2C6752FFE93E", 
+    description: 'With over 10 years of experience, Jenny specializes in providing compassionate and personalized care for seniors with mobility challenges. Known for a patient and understanding approach, they are skilled in creating engaging daily routines that enrich the lives of the elderly.'
+  },
+  {
+    name: 'Bob Listens',
+    image: "https://www.rightathome.net/-/media/rahv2/careers/coty/2023/image-grid-480x550/rah-cgoy23-headshots-anelmetellus-480x550.jpg?h=550&w=480&la=en&hash=D69D6A35D588DF105AE98C84C5A342D5", 
+    description: 'Bob is a certified nursing assistant with a passion for elder care. They have a strong background in assisting with daily living activities and medication management. Their warm and friendly demeanor makes them a favorite among clients, providing not just care but companionship.'
+  },
+  {
+    name: 'Kindness Jones',
+    image: "https://www.rightathome.net/-/media/rahv2/careers/coty/2023/image-grid-480x550/rah-cgoy23-headshots-vickibailiff480x550.jpg?h=550&w=480&la=en&hash=A4985CD9F66977398143A2F678B22122",
+    description: 'Bringing a creative and dynamic approach to caregiving, Kindness excels in incorporating physical and mental stimulation into the daily routines of their clients. With a focus on dementia care, they are adept at handling the unique challenges faced by seniors with cognitive impairments.'
+  }
 ];
-
 const CaretakersMatch = () => {
+  const navigate = useNavigate();
+
+  const navigateToBook = () => {
+    navigate('/book'); 
+  };
+
   return (
     <div className="caretakers-match">
       <div className="header">
         <h1>Match</h1>
-        <Link to="/">Home</Link> {/* This will take you back to the homepage */}
+        <Link to="/">Home</Link>
       </div>
       <div className="caretaker-list">
         {caretakers.map((caretaker, index) => (
@@ -22,6 +38,7 @@ const CaretakersMatch = () => {
             <img src={caretaker.image} alt={caretaker.name} />
             <h3>{caretaker.name}</h3>
             <p>{caretaker.description}</p>
+            <button className="book-button" onClick={navigateToBook}>Book</button> 
           </div>
         ))}
       </div>

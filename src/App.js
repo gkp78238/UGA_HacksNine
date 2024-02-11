@@ -7,7 +7,8 @@ import Content from './components/Content';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Chatbot from './components/Chatbot';
-import CaretakerMatcher from './components/CaretakersMatch'; // Import the component
+import CaretakerMatcher from './components/CaretakersMatch'; 
+import Book from './components/Book';
 
 function App() {
   return (
@@ -18,9 +19,15 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/chatbot" element={<Chatbot />} />
-          <Route path="/match" element={<CaretakerMatcher />} /> {/* Define the route */}
-          {/* Add other routes as needed */}
-          <Route path="/" element={<MainSection />} />
+          <Route path="/match" element={<CaretakerMatcher />} /> 
+          <Route path="/book" element={<Book />} /> 
+
+          <Route path="/" element={
+          <main classname= "content">
+              <MainSection />
+              <Content />
+            </main> 
+            } />
         </Routes>
         <Footer />
       </div>

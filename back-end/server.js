@@ -25,7 +25,8 @@ app.use(cors());
 app.use(express.json()); // Parses incoming requests with JSON payloads
 
 // Use routes
-app.use('/api/auth', authRoutes);
+app.use('/api/login', authRoutes);
+app.use('/api/register', authRoutes);
 app.use('/api/caregivers', caregiverRoutes);
 app.use('/api/elderly', elderlyRoutes);
 app.use('/api/matching', matchingRoutes);

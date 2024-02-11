@@ -2,7 +2,7 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   background-color: #333; /* A dark background for contrast */
   padding: 0.5rem 1rem; /* Uniform padding for top/bottom and left/right */
@@ -10,25 +10,42 @@
 }
 
 .nav-link {
+  display: flex;
   color: #fff; /* White text for readability */
   text-decoration: none; /* Remove underlines from links */
   padding: 0.5rem 0.75rem; /* Comfortable padding around the text */
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover effects */
   border-radius: 5px; /* Slightly rounded corners for a modern feel */
   font-weight: 500; /* Medium weight for the font */
+  margin-right: 1rem;
 }
 
 .nav-link:hover, .nav-link:focus {
-  background-color: #555; /* Darker background on hover for feedback */
+  background-color: rgb(236, 236, 236); /* Darker background on hover for feedback */
   color: #ddd; /* Slightly lighter text on hover for contrast */
   text-decoration: none; /* Ensure no underline appears on hover */
   cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+.nav-link:visited {
+  color: #fff; /* Set the color of visited links to match the color of regular links */
 }
 
 /* Optional: Add a logo style if you have a logo in your navbar */
 .logo {
   height: 40px; /* Fixed height for your logo */
   margin-right: 1rem; /* Space after logo before the nav links */
+}
+
+.title {
+  color: white;
+  font-weight: bolder;
+  margin-right: 86rem;
+  text-decoration: none;
+}
+
+.title:hover {
+  color: gray;
 }
 
 /* Responsive navbar for mobile devices */

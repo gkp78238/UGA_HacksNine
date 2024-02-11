@@ -1,6 +1,11 @@
-header {
+h1 {
     margin: 0;
     padding: 0%;
     background-color: beige;
     border: 10cap;
+}
+
+.cal {
+width: 100%;
+    
 }

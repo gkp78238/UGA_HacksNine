@@ -1,8 +1,9 @@
 import React from 'react';
 import { GoogleLogin } from 'react-google-login';
 import './Book.css';
+import calendarImage from '../Images/calendarImage.jpeg';
 
-// Ensure clientId is stored safely, consider using environment variables
+
 const clientId = "587776829840-8474v6hkt279dc2eh22oafdvtb11oihq.apps.googleusercontent.com";
 
 const Book = () => {
@@ -15,10 +16,10 @@ const Book = () => {
                 },
             });
             const data = await response.json();
-            console.log(data); // Consider updating component state to render calendar data
+            console.log(data); 
         } catch (error) {
             console.error('Error fetching calendar data:', error);
-            // Consider updating component state to show error
+
         }
     };
 
@@ -29,12 +30,12 @@ const Book = () => {
 
     const onFailure = (res) => {
         console.log('Login failed: res:', res);
-        // Consider providing user feedback on login failure
     };
 
     return (
         <div>
-            <header> When is the best time for you to join us on this journey? </header>
+            <h1> When is the best time for you to join us on this journey? </h1>
+            <img src= {calendarImage} alt="Calendar" className="cal" /> 
             <GoogleLogin
                 clientId={clientId}
                 buttonText="Login with Google"

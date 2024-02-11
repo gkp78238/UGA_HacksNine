@@ -5,9 +5,6 @@ import image1 from '../Images/BlackPPL.jpeg';
 const WhoWeAre = () => {
   return (
     <div className="container">
-      <div className="image-section">
-        <img src={image1} alt="Helping old people" />
-      </div>
       <div className="text-section">
         <h1>Who We Are</h1>
         <div className="content">
@@ -19,7 +16,6 @@ const WhoWeAre = () => {
           <button>Learn More</button>
         </div>
       </div>
-      {/* Card section */}
       <div className="card-section">
         <div className="card">
           <h2>Bipasha Bipin</h2>

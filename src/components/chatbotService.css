@@ -1,0 +1,79 @@
+/* Chatbot.css */
+.chatbot-container {
+  width: 300px;
+  height: 500px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  background: #f9f9f9;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+.chat-history {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.chat-message.bot {
+  background-color: #e0e0e0;
+  margin-left: auto;
+  text-align: right;
+}
+
+.chat-message.user {
+  background-color: #4e8cff;
+  color: white;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  background-color: #4e8cff;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3578e5;
+}
+
+/* Scrollbar styles */
+.chat-history::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.chat-history::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

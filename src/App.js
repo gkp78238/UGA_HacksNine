@@ -1,15 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Content from './components/Content';
 import MainSection from './components/MainSection';
-import Footer from './components/Footer'; 
+import Footer from './components/Footer';
+import Content from './components/Content';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Chatbot from './components/Chatbot';
-import ChatbotWidget from './components/ChatbotWidget';
-import Caretakers from './components/Caretakers';
-
+import CaretakerMatcher from './components/CaretakersMatch'; // Import the component
 
 function App() {
   return (
@@ -19,15 +17,10 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/chatbot" element={<Chatbot />} /> 
-          <Route path="/chatbotWidget" element={<ChatbotWidget />} />
-          <Route path="/caretakers" element={<Caretakers />} />
-          <Route path="/" element={
-            <main className="content">
-              <MainSection />
-              <Content /> 
-            </main>
-          } />
+          <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="/match" element={<CaretakerMatcher />} /> {/* Define the route */}
+          {/* Add other routes as needed */}
+          <Route path="/" element={<MainSection />} />
         </Routes>
         <Footer />
       </div>

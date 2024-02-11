@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Content from './components/Content';
 import MainSection from './components/MainSection';
-import Footer from './components/Footer';
-import Content from './components/Content'; // Make sure the path matches the location of your file
-import Signup from './components/Signup'; // Adjust the path to where your Signup component is located
-import Login from './components/Login'; // Import the Login component
-import Chatbot from './components/Chatbot'; // Import the Chatbot component
+import Footer from './components/Footer'; 
+import Signup from './components/Signup';
+import Login from './components/Login';
+import Chatbot from './components/Chatbot';
 import ChatbotWidget from './components/ChatbotWidget';
 import Caretakers from './components/Caretakers';
 
@@ -24,8 +24,8 @@ function App() {
           <Route path="/caretakers" element={<Caretakers />} />
           <Route path="/" element={
             <main className="content">
-              <Content /> {/* Main content */}
               <MainSection />
+              <Content /> 
             </main>
           } />
         </Routes>

@@ -42,7 +42,7 @@
 }
 
 .login-button {
-  background-color: #0056b3;
+  background-color: #afc0d3;
   color: white;
   padding: 0.75rem;
   border: none;
@@ -54,7 +54,7 @@
 
 .login-button:hover,
 .login-button:focus {
-  background-color: #004494;
+  background-color: #aec1d6;
   outline: none;
 }
 

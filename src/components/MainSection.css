@@ -19,18 +19,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; /* Allows images to stack on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .image-container img {
-  width: 30%; /* Adjust width as necessary */
+  width: 30%;
   margin: 0.5rem;
   border-radius: 8px;
 }
 
-/* Specific styles for the larger main image */
 .image-container .main-image {
-  flex: 2; /* Takes up twice the space of the side images */
+  flex: 2; 
   max-width: 60%; /* Adjust maximum width as necessary */
 }
 
@@ -40,10 +39,10 @@
   max-width: 30%; /* Adjust maximum width as necessary */
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .image-container img {
-      width: 100%; /* Stack images on top of each other on small screens */
+      width: 100%; 
       max-width: 100%;
   }
 }

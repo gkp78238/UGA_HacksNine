@@ -1,43 +1,40 @@
-require('dotenv').config(); // Load environment variables
+require('dotenv').config(); 
 
 const express = require('express');
-const mongoose = require('mongoose'); // Correctly place mongoose import here
+const mongoose = require('mongoose'); 
 const cors = require('cors');
 
-// Database connection
-const dbURI = process.env.MONGODB_URI; // Define dbURI after loading environment variables
+
+const dbURI = process.env.MONGODB_URI;
 console.log(dbURI)
 mongoose.connect(dbURI)
   .then(() => console.log('Connected to MongoDB'))
   .catch((error) => console.error('Error connecting to MongoDB:', error));
 
-// Import routes
 const router = express.Router();
 const authRoutes = require('./routes/authRoutes');
 const caregiverRoutes = require('./routes/caregiverRoutes');
 const elderlyRoutes = require('./routes/elderlyRoutes');
 const matchingRoutes = require('./routes/matchingRoutes');
-/**const chatController = require('../controllers/chatController');
+const chatController = require('./controllers/chatController');
 
-// Route for adding a message to a conversation
-router.post('/message', chatController.addMessageToConversation);**/
+
+router.post('/message', chatController.addMessageToConversation);
 
 module.exports = router;
 
 
 const app = express();
-const PORT = process.env.PORT || 5001;
-
-// Middleware
+const PORT = process.env.PORT || 5003;
 app.use(cors());
-app.use(express.json()); // Parses incoming requests with JSON payloads
+app.use(express.json()); 
 
-// Use routes
+
 app.use('/api/login', authRoutes);
 app.use('/api/register', authRoutes);
 app.use('/api/caregivers', caregiverRoutes);
 app.use('/api/elderly', elderlyRoutes);
 app.use('/api/matching', matchingRoutes);
 
-// Listen on port
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

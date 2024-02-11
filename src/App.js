@@ -7,6 +7,7 @@ import Content from './components/Content'; // Make sure the path matches the lo
 import Signup from './components/Signup'; // Adjust the path to where your Signup component is located
 import Login from './components/Login'; // Import the Login component
 import Chatbot from './components/Chatbot'; // Import the Chatbot component
+import ChatbotWidget from './components/ChatbotWidget';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/chatbot" element={<Chatbot />} /> {/* Route for the Chatbot */}
+          <Route path="/chatbot" element={<Chatbot />} /> 
+          <Route path="/chatbotWidget" element={<ChatbotWidget />} />
           <Route path="/" element={
             <main className="content">
               <Content /> {/* Main content */}

@@ -10,7 +10,6 @@ class Chatbot {
     async sendMessage(sessionId, text) {
         const sessionPath = this.sessionClient.projectAgentSessionPath(this.projectId, sessionId);
 
-        // The text query request.
         const request = {
             session: sessionPath,
             queryInput: {

@@ -36,13 +36,6 @@ class Chatbot {
     }
 }
 
-// Example usage
-// const chatbot = new Chatbot('your-google-cloud-project-id');
-// const sessionId = uuid.v4(); // Generate a unique session ID for each user conversation
-// chatbot.sendMessage(sessionId, 'Hello!').then(response => {
-//     console.log('Detected intent:', response);
-// }).catch(err => {
-//     console.error('Error sending message:', err);
-// });
+
 
 module.exports = Chatbot;

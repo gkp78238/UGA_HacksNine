@@ -7,20 +7,17 @@
 
   }
   
-  /**.image-section img {
-    width: 100%;
-    height: auto;
-  }**/
+  
   
   .text-section {
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    position: relative; 
     width: 50%;
     padding: 50px;
     margin-top: 175px;
   }
   
   .text-section::before {
-    content: ""; /* Necessary for the pseudo-element to be generated */
+    content: ""; 
     position: absolute;
     top: 0;
     left: 0;
@@ -29,8 +26,8 @@
     background-image: url('../Images/BlackPPL.jpeg');
     background-size: cover;
     background-position: center;
-    opacity: 0.5; /* Adjust the opacity as needed */
-    z-index: -1; /* Ensures the background is behind the text content */
+    opacity: 0.5; 
+    z-index: -1; 
   }
   
 

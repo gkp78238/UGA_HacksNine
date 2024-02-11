@@ -19,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="/match" element={<CaretakerMatcher />} />
           <Route path="/match" element={<CaretakerMatcher />} /> 
           <Route path="/book" element={<Book />} /> 
 

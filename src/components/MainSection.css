@@ -30,13 +30,12 @@
 
 .image-container .main-image {
   flex: 2; 
-  max-width: 60%; /* Adjust maximum width as necessary */
+  max-width: 60%; 
 }
 
-/* Specific styles for the side images */
 .image-container .side-image {
   flex: 1;
-  max-width: 30%; /* Adjust maximum width as necessary */
+  max-width: 30%; 
 }
 
 

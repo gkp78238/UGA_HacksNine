@@ -10,6 +10,11 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; 
 }
 
 .chatbot-messages {
@@ -65,4 +70,20 @@
 
 .chatbot-submit-button:hover {
   background-color: #0056b3;
+}
+
+
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; 
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
 }

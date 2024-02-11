@@ -1,9 +1,8 @@
-// Login.js
 
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Make sure you create a corresponding CSS file for styling
+import './Login.css'; 
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -17,12 +16,10 @@ const Login = () => {
     try {
       const response = await axios.post('/api/login', { username, password });
       console.log('Login successful');
-      // Here you might want to handle the successful login, such as redirecting to another page or setting a login state
     } catch (error) {
       navigate('/chatbot');
     }
     console.log('Login attempted with:', username, password);
-    // After login logic, you might want to set the username and password back to empty strings
     setUsername('');
     setPassword('');
   };

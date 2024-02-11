@@ -1,4 +1,3 @@
-/* CaretakersMatch.css */
 .caretakers-match {
   font-family: Arial, sans-serif;
   max-width: 1200px;
@@ -15,7 +14,7 @@
 
 .header h1 {
   margin: 0;
-  font-size: 2em; /* Example size */
+  font-size: 2em; 
 }
 
 .header a {
@@ -33,7 +32,7 @@
 
 .caretaker-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three profiles per row */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
 }
 

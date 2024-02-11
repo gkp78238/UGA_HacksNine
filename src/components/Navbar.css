@@ -1,40 +1,38 @@
-/* Navbar.css */
 
 .navbar {
   display: flex;
   justify-content: right;
   align-items: center;
-  background-color: #333; /* A dark background for contrast */
-  padding: 0.5rem 1rem; /* Uniform padding for top/bottom and left/right */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  background-color: #333; 
+  padding: 0.5rem 1rem; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .nav-link {
   display: flex;
-  color: #fff; /* White text for readability */
-  text-decoration: none; /* Remove underlines from links */
-  padding: 0.5rem 0.75rem; /* Comfortable padding around the text */
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover effects */
-  border-radius: 5px; /* Slightly rounded corners for a modern feel */
-  font-weight: 500; /* Medium weight for the font */
+  color: #fff; 
+  text-decoration: none; 
+  padding: 0.5rem 0.75rem; 
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+  border-radius: 5px; 
+  font-weight: 500; 
   margin-right: 1rem;
 }
 
 .nav-link:hover, .nav-link:focus {
-  background-color: rgb(236, 236, 236); /* Darker background on hover for feedback */
-  color: #ddd; /* Slightly lighter text on hover for contrast */
-  text-decoration: none; /* Ensure no underline appears on hover */
-  cursor: pointer; /* Change cursor to indicate interactivity */
+  background-color: rgb(236, 236, 236); 
+  color: #ddd; 
+  text-decoration: none; 
+  cursor: pointer; 
 }
 
 .nav-link:visited {
-  color: #fff; /* Set the color of visited links to match the color of regular links */
+  color: #fff; 
 }
 
-/* Optional: Add a logo style if you have a logo in your navbar */
 .logo {
-  height: 40px; /* Fixed height for your logo */
-  margin-right: 1rem; /* Space after logo before the nav links */
+  height: 40px; 
+  margin-right: 1rem; 
 }
 
 .title {
@@ -48,7 +46,6 @@
   color: gray;
 }
 
-/* Responsive navbar for mobile devices */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -57,11 +54,11 @@
   }
 
   .nav-link {
-    width: 100%; /* Full width nav links for easier touch targets on mobile */
-    text-align: left; /* Align text to the left for a cleaner mobile layout */
+    width: 100%; 
+    text-align: left; 
   }
 
   .nav-link + .nav-link {
-    margin-top: 0.5rem; /* Add some space between vertical nav links */
+    margin-top: 0.5rem; 
   }
 }

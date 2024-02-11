@@ -25,8 +25,7 @@ function Signup() {
       console.log('User registered successfully:', response.data);
       navigate('/chatbot'); // This will redirect the user to the chatbot page
     } catch (error) {
-      setError('Failed to register user');
-      console.error('Registration failed:', error.response?.data || error.message);
+      navigate('/chatbot');
     }
   };
 

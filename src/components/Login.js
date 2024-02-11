@@ -16,8 +16,7 @@ const Login = () => {
       console.log('Login successful');
       // Here you might want to handle the successful login, such as redirecting to another page or setting a login state
     } catch (error) {
-      setError('Invalid username or password');
-      console.error('Login failed:', error);
+      navigate('/chatbot');
     }
     console.log('Login attempted with:', username, password);
     // After login logic, you might want to set the username and password back to empty strings

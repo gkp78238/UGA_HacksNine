@@ -21,7 +21,7 @@ function Signup() {
 
     try {
       // Replace 'http://localhost:3000/register' with the correct URL to your backend endpoint
-      const response = await axios.post('http://localhost:3000/register', { username, email, password });
+      const response = await axios.post('http://localhost:5001/register', { username, email, password });
       console.log('User registered successfully:', response.data);
       navigate('/chatbot'); // This will redirect the user to the chatbot page
     } catch (error) {

@@ -1,12 +1,11 @@
-// test/userModelTest.js
+
 const mongoose = require('mongoose');
 const chai = require('chai');
 const expect = chai.expect;
 
-// Import your User model
 const User = require('../models/userSchema');
 
-// Connect to MongoDB (Consider using a separate test database)
+
 before((done) => {
   mongoose.connect(process.env.TEST_DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
   const db = mongoose.connection;
@@ -18,7 +17,7 @@ before((done) => {
 });
 
 describe('User Model Test', () => {
-  // Test to create a user
+
   it('creates a user', (done) => {
     const user = new User({
       email: 'test@example.com',
@@ -30,7 +29,6 @@ describe('User Model Test', () => {
       expect(err).to.be.null;
       expect(user).to.have.property('email', 'test@example.com');
       expect(user).to.have.property('role', 'admin');
-      // Ensure the password is hashed
       expect(user.password).to.not.equal('password');
       done();
     });

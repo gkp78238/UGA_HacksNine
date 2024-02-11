@@ -5,7 +5,7 @@ import './Signup.css';
 
 function Signup() {
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState(''); // Define email state
+  const [email, setEmail] = useState(''); 
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [error, setError] = useState('');
@@ -20,17 +20,17 @@ function Signup() {
     }
 
     try {
-      // Replace 'http://localhost:3000/register' with the correct URL to your backend endpoint
-      const response = await axios.post('http://localhost:5001/register', { username, email, password });
+  
+      const response = await axios.post('http://localhost:5003/back-end/register', { username, email, password });
       console.log('User registered successfully:', response.data);
-      navigate('/chatbot'); // This will redirect the user to the chatbot page
+      navigate('/chatbot'); 
     } catch (error) {
       navigate('/chatbot');
     }
   };
 
   return (
-    <form className="signup-form" onSubmit={handleSubmit}>
+    <form className="signup-form" onSubmit={handleSubmit} method="post">
       <h2>Sign Up</h2>
       {error && <div className="error">{error}</div>}
       <input

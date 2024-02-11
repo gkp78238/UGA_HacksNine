@@ -1,8 +1,8 @@
 import React from 'react';
 import './MainSection.css';
-import image1 from '../Images/HelpingElderly.jpeg'; // replace with actual path and filename
-import image2 from '../Images/HelpingElderly2.jpeg'; // replace with actual path and filename
-import image3 from '../Images/Nature.jpeg'; // replace with actual path and filename
+import image1 from '../Images/HelpingElderly.jpeg'; 
+import image2 from '../Images/HelpingElderly2.jpeg'; 
+import image3 from '../Images/Nature.jpeg'; 
 
 const MainSection = () => {
     return (

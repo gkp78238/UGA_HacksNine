@@ -37,10 +37,42 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .text-section button:hover {
     background-color: #005f73;
   }
+
+  .card-section {
+    display: flex; 
+    justify-content: space-between; 
+    padding: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+  }
+  
+  .card {
+    border: 2px solid black; 
+    padding: 20px;
+    margin-bottom: 20px; 
+    border-radius: 5px;
+    flex-basis: calc(33.333% - 40px); 
+    box-sizing: border-box; 
+    
+  }
+
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+  }
+  
+  .image-section, .text-section {
+    width: 100%; 
+  }
+  
+  
   

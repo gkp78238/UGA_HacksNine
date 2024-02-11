@@ -7,10 +7,10 @@ const User = require('../models/userSchema');
 // Register a new user
 exports.register = async (req, res) => {
     try {
-        const { username, password } = req.body;
+        const { username, email, password } = req.body;
 
         // Check if user already exists
-        let user = await User.findOne({ username });
+        let user = await User.findOne({ email });
         if (user) {
             return res.status(400).json({ message: 'User already exists' });
         }
@@ -21,6 +21,7 @@ exports.register = async (req, res) => {
         // Create new user
         user = new User({
             username,
+            email,
             password: hashedPassword
         });
 

@@ -12,10 +12,18 @@ mongoose.connect(dbURI)
   .catch((error) => console.error('Error connecting to MongoDB:', error));
 
 // Import routes
+const router = express.Router();
 const authRoutes = require('./routes/authRoutes');
 const caregiverRoutes = require('./routes/caregiverRoutes');
 const elderlyRoutes = require('./routes/elderlyRoutes');
 const matchingRoutes = require('./routes/matchingRoutes');
+const chatController = require('../controllers/chatController');
+
+// Route for adding a message to a conversation
+router.post('/message', chatController.addMessageToConversation);
+
+module.exports = router;
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;

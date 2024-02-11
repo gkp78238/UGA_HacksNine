@@ -10,6 +10,7 @@ import Chatbot from './components/Chatbot'; // Import the Chatbot component
 import ChatbotWidget from './components/ChatbotWidget';
 import Caretakers from './components/Caretakers';
 
+
 function App() {
   return (
     <Router>

@@ -1,8 +1,10 @@
-import './Caretakers.css';
 import React from 'react';
+import './Caretakers.css';
 
-const Caretakers () {
+const Caretakers = () => {
     return (
-        <div> </div>
-    )
-}
+        <div> {/* Content of your Caretakers component should go here */} </div>
+    );
+};
+
+export default Caretakers; // Make sure this line is included

@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+##Team members: Gokul Premkumar, Bipasha Bipin, London Ho, Meghan Dey 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration
+The inspiration behind Superhero Care came from the need to improve the elderly care experience by seamlessly integrating technology. We aimed to create a platform that not only facilitates the matching of seniors with caretakers but also simplifies scheduling and communication, making the entire process more personal, efficient, and accessible.
 
-## Available Scripts
+## What it does
+Superhero Care is a platform designed to match elderly individuals with caretakers who share similar personalities and beliefs, enhancing the caregiving experience. It allows users to log in, view available caretakers, book appointments, and manage their schedules through integration with Google Calendar. This personalized approach aims to improve the quality of care and support provided to seniors.
 
-In the project directory, you can run:
+## How we built it
+We built Superhero Care using React for the frontend, creating a responsive and user-friendly interface. For authentication and calendar integration, we utilized the Google Calendar API and the `react-google-login` package for OAuth2.0 authentication. The project structure involves components for displaying caretaker profiles, handling login functionality, and fetching calendar events, ensuring a seamless user experience.
 
-### `npm start`
+## Challenges we ran into
+One of the main challenges was integrating the Google Calendar API, particularly managing OAuth2.0 authentication and ensuring secure access without exposing sensitive credentials. Additionally, fetching and displaying calendar data presented a learning curve. We also faced issues with dependency conflicts in our React project, requiring us to adapt and find workarounds for version compatibility.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Accomplishments that we're proud of
+We are proud of successfully integrating the ChatBot API. We are also glad to be attempting to integrate the Google Calendar API with our React application, enabling users to manage their appointments directly within Superhero Care. Overcoming the challenges of OAuth2.0 authentication and ensuring a secure login process were significant achievements. Additionally, creating a responsive and intuitive UI that enhances the user experience stands out as a key accomplishment. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What we learned
+Throughout this project, we learned about OAuth2.0 authentication flows, integrating third-party APIs such as Google Calendar into a React application, and handling CORS issues. We also gained experience in managing dependency conflicts and utilizing React hooks for state management and side effects.
 
-### `npm test`
+## What's next for Superhero Care
+Looking ahead, we plan to expand Superhero Care by adding features such as real-time notifications, caretaker reviews, and enhanced matching algorithms. We aim to explore server-side rendering for improved SEO and performance, and consider incorporating AI to analyze user preferences for better matches. Ultimately, we want to create a comprehensive platform that serves as a one-stop solution for elderly care needs, fostering community and support among users.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -8,6 +8,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Chatbot from './components/Chatbot';
 import ChatbotWidget from './components/ChatbotWidget';
+import Caretakers from './components/Caretakers';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/chatbot" element={<Chatbot />} /> 
           <Route path="/chatbotWidget" element={<ChatbotWidget />} />
+          <Route path="/caretakers" element={<Caretakers />} />
           <Route path="/" element={
             <main className="content">
               <MainSection />

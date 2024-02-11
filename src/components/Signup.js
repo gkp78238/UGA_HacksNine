@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Signup.css';
 
 function Signup() {
@@ -9,56 +10,30 @@ function Signup() {
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [error, setError] = useState('');
 
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (password !== passwordConfirm) {
+      setError("Passwords don't match");
+      return; // Stop the function if passwords don't match
+    }
     try {
       // Send a POST request to your backend endpoint for user registration
       const response = await axios.post('/api/register', { username, email, password });
       console.log('User registered successfully:', response.data);
-      // Optionally, you can redirect the user to a different page after successful registration
+      // Redirect the user to a different page after successful registration
+      navigate('/chatbot'); // Adjust '/chatbot' to your desired route
     } catch (error) {
       setError('Failed to register user');
       console.error('Registration failed:', error);
     }
-    console.log('Submitted:', { username, email, password, passwordConfirm });
-    // You would typically want to validate the inputs and then send them to your server here
-    setUsername('');
-    setEmail('');
-    setPassword('');
-    setPasswordConfirm('');
   };
 
   return (
     <form className="signup-form" onSubmit={handleSubmit}>
-      <h2>Sign Up</h2>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        required
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Confirm Password"
-        value={passwordConfirm}
-        onChange={(e) => setPasswordConfirm(e.target.value)}
-        required
-      />
+      {/* Form fields */}
+      {error && <p className="error">{error}</p>} {/* Display any error */}
       <button type="submit">Sign Up</button>
     </form>
   );
